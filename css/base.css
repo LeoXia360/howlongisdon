@@ -127,6 +127,11 @@ nav ul li p {
 
 button {
     border: none;
+    padding: 20px;
+    background-color: #993d33;
+    font-size: 20px;
+    color: #ffffff;
+    letter-spacing: 2px;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */

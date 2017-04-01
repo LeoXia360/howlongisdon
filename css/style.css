@@ -77,6 +77,7 @@ header {
     width: 60%;
     height: auto;
     background-color: #ffffff;
+    color: #000000;
     padding: 20px;
     font-size: 20px;
     letter-spacing: 2px;
@@ -89,3 +90,11 @@ header {
     padding: 0 10px;
 }
 
+/* Admin
+------------------------------------------------------------ */
+
+.admin-buttons button {
+    width: 60%;
+    display: block;
+    margin: 20px auto;
+}
