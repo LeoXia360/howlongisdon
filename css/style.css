@@ -1,0 +1,91 @@
+body, html {
+    height: 100%;
+    text-transform: lowercase;
+}
+
+nav {
+    position: relative;
+    z-index: 1;
+    letter-spacing: 1.5px;
+}
+
+.navbar-wrapper {
+    height: 3rem;
+    background-color: #000000;
+}
+
+.navbar {
+    text-align: center;
+}
+
+header {
+    margin: 30px auto;
+}
+
+/* Wait Time
+------------------------------------------------------------ */
+.time p {
+    text-align: center;
+}
+
+#minutes {
+    font-size: 200px;
+    color: #993d33;
+    margin: 0 auto;
+    line-height: 1.2;
+}
+
+#minutes-text {
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+
+/* Facebook
+------------------------------------------------------------ */
+#facebook {
+    text-align: center;
+}
+
+/* Subscribe
+------------------------------------------------------------ */
+#subscribe form {
+    width: 80%;
+    background-color: #993d33;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+#subscribe form p {
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+#subscribe input {
+    margin: 10px auto;
+    display: block;
+    width: 60%;
+    height: 40px;
+    border: none;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+#subscribe button {
+    margin: 10px auto;
+    display: block;
+    width: 60%;
+    height: auto;
+    background-color: #ffffff;
+    padding: 20px;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+/* Social
+------------------------------------------------------------ */
+.fa {
+    color: #ffffff;
+    padding: 0 10px;
+}
+
