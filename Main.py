@@ -1,6 +1,6 @@
-from User import User
+from Owner import Owner
 
-x = User('don_owner')
+x = Owner('don_owner')
 y = False
 
 while(y == False):
