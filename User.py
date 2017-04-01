@@ -16,6 +16,7 @@ class User():
         cipher_suite = None
         cipher_username = ""
         cipher_password = ""
+        subscriber_list = []
 
         def __init__(self, arg):
             self.val = arg
@@ -27,15 +28,11 @@ class User():
             self.cipher_username = self.cipher_suite.encrypt(username)
             self.cipher_password = self.cipher_suite.encrypt(password)
 
-            print "cipher username :" + self.cipher_username
-
-
         def login(self):
             """Allows the user to login allows access to other features"""
             entered_username = raw_input('Enter your username: ')
             entered_password = raw_input('Enter your password: ')
             cipher_suite = Fernet(self.key)
-            print "cipher username : " + self.cipher_username
             username = self.cipher_suite.decrypt(self.cipher_username)
             password = self.cipher_suite.decrypt(self.cipher_password)
             if (entered_username == username) and (entered_password == password):
@@ -75,12 +72,6 @@ class User():
     def __getattr__(self, name):
         return getattr(self.instance, name)
 
-    
-
-x = User('leo');
-y = False
-while(not y):
-    y = x.login()
 
 
 

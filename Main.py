@@ -1,3 +1,7 @@
-import User, Owner
+from User import User
 
-print "works"
+x = User('don_owner')
+y = False
+
+while(y == False):
+    y = x.login()
