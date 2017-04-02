@@ -20,7 +20,7 @@ header {
   outline: 0;
   padding: 0;
   cursor: pointer;
-  border-bottom: 4px solid currentColor;
+  border-bottom: 4px solid #000000;
   width: 28px;
   transition: border-bottom 1s ease-in-out;
   -webkit-transition: border-bottom 1s ease-in-out;
@@ -32,7 +32,7 @@ header {
 .burger:before {
   content: "";
   display: block;
-  border-bottom: 4px solid currentColor;
+  border-bottom: 4px solid #000000;
   width: 100%;
   margin-bottom: 5px;
   transition: -webkit-transform 0.5s ease-in-out;
@@ -43,7 +43,7 @@ header {
 .burger:after {
   content: "";
   display: block;
-  border-bottom: 4px solid currentColor;
+  border-bottom: 4px solid #000000;
   width: 100%;
   margin-bottom: 5px;
   transition: -webkit-transform 0.5s ease-in-out;
@@ -98,7 +98,7 @@ ul {
 
 li {
   list-style: none;
-  font-size: 25px;
+  font-size: 18px;
   padding: 5px 0;
     display:block;
 }
@@ -111,6 +111,9 @@ li a:hover {
 
 /* Feed
 ------------------------------------------------------------ */
+#feed {
+    text-align: center;
+}
 
 /* Facebook
 ------------------------------------------------------------ */
