@@ -115,6 +115,10 @@ li a:hover {
     text-align: center;
 }
 
+#feed img {
+    width: 100%;
+}
+
 /* Facebook
 ------------------------------------------------------------ */
 #facebook {
