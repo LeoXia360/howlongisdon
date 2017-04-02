@@ -3,42 +3,114 @@ body, html {
     text-transform: lowercase;
 }
 
-nav {
-    position: relative;
-    z-index: 1;
-    letter-spacing: 1.5px;
-}
-
-.navbar-wrapper {
-    height: 3rem;
-    background-color: #000000;
-}
-
-.navbar {
-    text-align: center;
-}
-
 header {
     margin: 30px auto;
 }
 
-/* Wait Time
+/* Navigation
 ------------------------------------------------------------ */
-.time p {
+.navbar {
     text-align: center;
+    padding-top: 20px;
+}
+.burger {
+  display: inline-block;
+  border: 0;
+  background: none;
+  outline: 0;
+  padding: 0;
+  cursor: pointer;
+  border-bottom: 4px solid currentColor;
+  width: 28px;
+  transition: border-bottom 1s ease-in-out;
+  -webkit-transition: border-bottom 1s ease-in-out;
+}
+.burger::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+.burger:before {
+  content: "";
+  display: block;
+  border-bottom: 4px solid currentColor;
+  width: 100%;
+  margin-bottom: 5px;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+}
+.burger:after {
+  content: "";
+  display: block;
+  border-bottom: 4px solid currentColor;
+  width: 100%;
+  margin-bottom: 5px;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
 }
 
-#minutes {
-    font-size: 200px;
-    color: #993d33;
-    margin: 0 auto;
-    line-height: 1.2;
+.burger-check {
+  display: none;
 }
 
-#minutes-text {
-    font-size: 40px;
-    letter-spacing: 5px;
+.burger-check:checked ~ .burger {
+  border-bottom: 4px solid transparent;
+  transition: border-bottom 0.8s ease-in-out;
+  -webkit-transition: border-bottom 0.8s ease-in-out;
 }
+.burger-check:checked ~ .burger:before {
+  transform: rotate(-405deg) translateY(1px) translateX(-3px);
+  -webkit-transform: rotate(-405deg) translateY(1px) translateX(-3px);
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+}
+.burger-check:checked ~ .burger:after {
+  transform: rotate(405deg) translateY(-4px) translateX(-5px);
+  -webkit-transform: rotate(405deg) translateY(-4px) translateX(-5px);
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+}
+
+.navigation {
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.burger-check:checked ~ .navigation {
+  max-height: 500px;
+  -webkit-transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.5s ease-in-out;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  font-size: 25px;
+  padding: 5px 0;
+    display:block;
+}
+li a {
+  text-decoration: none;
+}
+li a:hover {
+  text-decoration: underline;
+}
+
+/* Feed
+------------------------------------------------------------ */
 
 /* Facebook
 ------------------------------------------------------------ */
@@ -56,7 +128,7 @@ header {
 }
 
 #subscribe form p {
-    font-size: 40px;
+    font-size: 24px;
     text-align: center;
     font-weight: bold;
     letter-spacing: 5px;
@@ -69,6 +141,7 @@ header {
     border: none;
     font-size: 20px;
     letter-spacing: 2px;
+    border-radius: 0px;
 }
 
 #subscribe button {
@@ -97,4 +170,12 @@ header {
     width: 60%;
     display: block;
     margin: 20px auto;
+}
+
+/* Mobile
+------------------------------------------------------------ */
+
+@media only screen and (max-width : 640px) {
+
+	
 }
