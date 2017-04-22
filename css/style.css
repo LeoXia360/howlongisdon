@@ -9,6 +9,9 @@ body, html {
 header {
     margin: 30px auto;
 }
+intro{
+    text-align: center;
+}
 
 /* Navigation
 ------------------------------------------------------------ */
