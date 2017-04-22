@@ -2,6 +2,9 @@ body, html {
     height: 100%;
     text-transform: lowercase;
 }
+.images{
+    margin: 10px auto:
+}
 
 header {
     margin: 30px auto;
