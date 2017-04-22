@@ -3,7 +3,7 @@ body, html {
     text-transform: lowercase;
 }
 .images{
-    margin: 10px auto:
+    float:left;
 }
 
 header {
