@@ -1,1 +1,1 @@
-web: gunicorn souped.py
+web: gunicorn souped:app
