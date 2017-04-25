@@ -1,14 +1,14 @@
-import requests
+#import requests
 
 import datetime
 import pytz
 
 from bs4 import BeautifulSoup
 
-from selenium import webdriver  
-from selenium.common.exceptions import NoSuchElementException  
-from selenium.webdriver.common.keys import Keys  
-from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
+#from selenium import webdriver  
+#from selenium.common.exceptions import NoSuchElementException  
+#from selenium.webdriver.common.keys import Keys  
+#from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 from flask import Flask
 from flask import render_template
 app = Flask(__name__)
@@ -19,17 +19,19 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/<name>')
 def calculate(name=None):
-    browser = webdriver.Firefox(executable_path='/usr/local/bin/geckodriver')
-    browser.get('https://www.google.com/search?q=don+japanese+food+truck&ie=utf-8&oe=utf-8')
-    html_source = browser.page_source
-    browser.quit()
+    #browser = webdriver.Firefox(executable_path='/usr/local/bin/geckodriver')
+    #browser.get('https://www.google.com/search?q=don+japanese+food+truck&ie=utf-8&oe=utf-8')
+    #html_source = browser.page_source
+    #browser.quit()
 
-    soup = BeautifulSoup(html_source,'html.parser')
+    #soup = BeautifulSoup(html_source,'html.parser')
 
-    html = soup.prettify("utf-8")
-    with open("output.html", "wb") as file:
-        file.write(html)
-    file.close()
+    #html = soup.prettify("utf-8")
+    #with open("output.html", "rb") as file:
+    #   file.write(html)
+    #file.close()
+
+    soup = BeautifulSoup(open("output.html"))
 
     current = soup.find("div", {"class": "lubh-bar lubh-sel"})
     if current is not None:
