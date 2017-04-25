@@ -1,1 +1,1 @@
-web: python souped.py
+web: gunicorn souped.py
