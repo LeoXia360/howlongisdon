@@ -139,8 +139,143 @@ def calculate(name=None):
             with app.app_context():
                 return render_template('index.html', name="The wait time is about: " + str(int(int(times[day])*75/81)) + " minutes.")
 
+@app.route('/about')
+def about():
+    return """
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+        <meta charset="utf-8">
+        <title>How Long Is Don?</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <meta name="description" content="A web application for seeing how long the line at Don's food truck is.">
+        <link rel="shortcut icon" type="image/png" href="static/img/favicon.ico"/>
+        <link rel="stylesheet" type="text/css" href="static/css/base.css">
+        <link rel="stylesheet" type="text/css" href="static/css/style.css">
+        <script src="https://use.fontawesome.com/a0aa51d3df.js"></script>
+        <script src="static/js/main.js"></script>
+        </head>
+        <body>
+        <div class="navbar">
+        <input class="burger-check" id="burger-check" type="checkbox"><label for="burger-check" class="burger"></label>
+        <nav id="navigation1" class="navigation">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="admin.html">Login</a></li>
+        </ul>
+        </nav>
+        </div>
+        <header>
+        <h1>how long is don?</h1>
+        </header>
+        <p>aaron rodgers is the goat</p>
+        </body>
+        <footer>
+        <div class="social">
+        <a href="https://www.facebook.com/DonJapanese/" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
+        <a href="https://twitter.com/DonJapanese" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+        <a href="https://www.instagram.com/donjapanese/" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
+        </div>
+        </footer>
+        </html>
+        
+        """
+@app.route('/admin')
+def admin():
+    return """
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+        <meta charset="utf-8">
+        <title>How Long Is Don?</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <meta name="description" content="A web application for seeing how long the line at Don's food truck is.">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
+        <link rel="stylesheet" type="text/css" href="css/base.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="https://use.fontawesome.com/a0aa51d3df.js"></script>
+        <script src="js/main.js"></script>
+        </head>
+        <body>
+        <div class="navbar">
+        <input class="burger-check" id="burger-check" type="checkbox"><label for="burger-check" class="burger"></label>
+        <nav id="navigation1" class="navigation">
+        <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/admin.html">Login</a></li>
+        </ul>
+        </nav>
+        </div>
+        <header>
+        <h1>how long is don?</h1>
+        </header>
+        <div class="admin-buttons">
+        <button>create a promotion</button>
+        <button>logout</button>
+        </div>
+        </body>
+        <footer>
+        <div class="social">
+        <a href="https://www.facebook.com/DonJapanese/" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
+        <a href="https://twitter.com/DonJapanese" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+        <a href="https://www.instagram.com/donjapanese/" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
+        </div>
+        </footer>
+        </html>
+        """
+
+@app.route('/contact')
+def contact():
+    return """
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+        <meta charset="utf-8">
+        <title>How Long Is Don?</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <meta name="description" content="A web application for seeing how long the line at Don's food truck is.">
+        <link rel="shortcut icon" type="image/png" href="static/img/favicon.ico"/>
+        <link rel="stylesheet" type="text/css" href="static/css/base.css">
+        <link rel="stylesheet" type="text/css" href="static/css/style.css">
+        <script src="https://use.fontawesome.com/a0aa51d3df.js"></script>
+        <script src="static/js/main.js"></script>
+        </head>
+        <body>
+        <div class="navbar">
+        <input class="burger-check" id="burger-check" type="checkbox"><label for="burger-check" class="burger"></label>
+        <nav id="navigation1" class="navigation">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="admin.html">Login</a></li>
+        </ul>
+        </nav>
+        </div>
+        <header>
+        <h1>how long is don?</h1>
+        </header>
+        <p>say hi to us!</p>
+        </body>
+        <footer>
+        <div class="social">
+        <a href="https://www.facebook.com/DonJapanese/" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
+        <a href="https://twitter.com/DonJapanese" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+        <a href="https://www.instagram.com/donjapanese/" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
+        </div>
+        </footer>
+        </html>
+        
+        """
 
 
+about()
+admin()
+contact()
 calculate()
 
 
