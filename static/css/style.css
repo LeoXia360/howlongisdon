@@ -167,6 +167,9 @@ li a:hover {
 #wait {
   text-align: center;
   background: #993d33;
+}
+
+#wait h2, #wait h3 {
   color: #ffffff;
 }
 
