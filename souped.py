@@ -31,7 +31,7 @@ def calculate(name=None):
     #   file.write(html)
     #file.close()
 
-    soup = BeautifulSoup(open("output.html"), "html.parser")
+    soup = BeautifulSoup(open("/home/howlongisdon/mysite/output.html"))
 
     current = soup.find("div", {"class": "lubh-bar lubh-sel"})
     if current is not None:
