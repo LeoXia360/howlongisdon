@@ -1,5 +1,5 @@
 from Owner import Owner
-from mod_python import apache
+#from mod_python import apache
 
 x = Owner('don_owner')
 y = False

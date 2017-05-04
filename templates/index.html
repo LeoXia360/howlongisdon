@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf-8">
         <title>How Long Is Don?</title>
-        <h1>Hello {{ name }}!</h1>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
         <meta name="description" content="A web application for seeing how long the line at Don's food truck is.">
         <link rel="shortcut icon" type="image/png" href="static/img/favicon.ico"/>
@@ -11,7 +10,18 @@
         <link rel="stylesheet" type="text/css" href="static/css/style.css">
         <script src="https://use.fontawesome.com/a0aa51d3df.js"></script>
         <script src="static/js/main.js"></script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-98417223-1', 'auto');
+          ga('send', 'pageview');
+
+        </script>
     </head>
+    <div id="main-wrapper">
     <body>
         <div id="fb-root"></div>
         <script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0];
@@ -25,10 +35,12 @@
             <input class="burger-check" id="burger-check" type="checkbox"><label for="burger-check" class="burger"></label>
             <nav id="navigation1" class="navigation">
               <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="admin.html">Login</a></li>
+                <li><a href="/">Home</a></li>
+                <li id="about-link"><a href="about.html">About</a></li>
+                <li id="contact-link"><a href="contact.html">Contact</a></li>
+                <li id="reviews-link"><a href="reviews.html">Reviews</a></li>
+                <li id="admin-link"><a href="login">Login</a></li>
+                <li id="protected-link"><a href="protected">Admin</a></li>
               </ul>
             </nav>
         </div>
@@ -36,19 +48,25 @@
             <h1>how long is don?</h1>
         </header>
         <section id="wait">
-            <p>estimated wait time:</p>
-            <h2 id="time">hi</h2>
-            <img src="apps/img/line.jpg"/>
+            <h3>estimated wait time:</h3>
+            <h2>{{ name }}</h2>
         </section>
         <section id="facebook">
             <div class="fb-page" data-href="https://www.facebook.com/donjapanese/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/donjapanese/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/donjapanese/">Don Japanese Food Truck</a></blockquote></div>
         </section>
         <section id="subscribe">
-            <form action="/subscribe" method="post">
-                <p>subscribe to our newsletter</p>
-                <input type="email" placeholder="email">
-                <button>subscribe</button>
+            <form action="." method="post">
+                <p>subscribe to receive daily reminder emails</p>
+                <input type="email" name="email" placeholder="email">
+                <button onclick="myFunction();">subscribe/unsubscribe</button>
+                <script>
+                function myFunction(){
+                alert("Thank you!");
+                };
+
+                </script>
             </form>
+
         </section>
     </body>
     <footer>
@@ -58,5 +76,5 @@
             <a href="https://www.instagram.com/donjapanese/" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
         </div>
     </footer>
+    </div>
 </html>
-    

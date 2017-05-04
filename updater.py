@@ -7,9 +7,9 @@ from bs4 import BeautifulSoup
 
 from pyvirtualdisplay import Display
 
-from selenium import webdriver  
-from selenium.common.exceptions import NoSuchElementException  
-from selenium.webdriver.common.keys import Keys  
+from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.common.keys import Keys
 #from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 #binary = FirefoxBinary('/Applications/Firefox.app')/usr/local/bin/geckodriver-0.16.0
 #browser = webdriver.Firefox(firefox_binary=binary)
@@ -25,7 +25,7 @@ display.popen.terminate()
 soup = BeautifulSoup(html_source,'html.parser')
 
 html = soup.prettify("utf-8")
-with open("output.html", "wb") as file:
+with open("/home/howlongisdon/mysite/output.html", "wb") as file:
     file.write(html)
 file.close()
 print ("Updated")
